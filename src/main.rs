@@ -1,7 +1,7 @@
 use anyhow::Error;
 use clap::{App, Arg};
 use rust_tuyapi::{payload, tuyadevice::TuyaDevice, TuyaType};
-use std::net::SocketAddr;
+use std::net::IpAddr;
 
 type Result<T> = std::result::Result<T, Error>;
 fn main() -> Result<()> {
@@ -55,7 +55,7 @@ fn main() -> Result<()> {
     if let Some(ref matches) = matches.subcommand_matches("set") {
         let version = matches.value_of("version").unwrap();
         let key = matches.value_of("key");
-        let ip: SocketAddr = matches.value_of("key").unwrap().parse()?;
+        let ip: IpAddr = matches.value_of("key").unwrap().parse()?;
         let id = matches.value_of("id").unwrap();
         let value = matches.value_of("raw-value").unwrap();
         let td = TuyaDevice::create(version, key, ip)?;

@@ -15,4 +15,4 @@ keywords = ["tuya", "smarthome", "smartlife", "cli"]
 anyhow = "1.0"
 clap = "3.0.0-beta.2"
 openssl = { version = "0.10", features = ["vendored"] }
-rust-tuyapi = "0.3"
+rust-tuyapi = "0.4"
