@@ -14,5 +14,6 @@ keywords = ["tuya", "smarthome", "smartlife", "cli"]
 [dependencies]
 anyhow = "1.0"
 clap = "3.0.0-beta.2"
-openssl = { version = "0.10", features = ["vendored"] }
-rust-tuyapi = "0.4"
+#openssl = { version = "0.10", features = ["vendored"] }
+openssl = "0.10"
+rust-tuyapi = { git = "https://github.com/rinie/rust-tuyapi" }
